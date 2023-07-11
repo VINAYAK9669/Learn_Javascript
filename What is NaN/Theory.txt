@@ -1,0 +1,5 @@
+Q1) What is NaN in JavaScript?
+
+    > NaN is a gobal property representing "Not a Number"
+    > NaN is returned when a mathematical operation or function is performed, but the result is not a valid number.
+    > Example with explanation is given in the index.js file

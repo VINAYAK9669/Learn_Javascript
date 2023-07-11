@@ -1,0 +1,25 @@
+===================QUESTIONS===============================
+
+Q1)  What is a closure in JavaScript?
+
+Q.2) How can you access private variable or function outside the scope ?
+
+Q.3) Explain the advantage of closure ?
+
+-----------------------------------------------------------
+
+====================ANSWERS================================
+
+        Q 1) 
+
+            >> It allows a function to access variables from its outer (enclosing) scope even after the outer function has finished executing.
+            >> When a function comes under the another function the 'closure' is created
+            >> closure pattern remembers outer variable and also helps to access outer scope members.
+
+        Q2)
+
+            >> See Example CODE:1,2,3- Access private variable or function outside the scope. 
+
+        Q3)
+            >> The main advantage of the "closure" is that any member which is private for certain scope, can be accessed keeping it private so that 
+               the variable is away from any accidental change of value.

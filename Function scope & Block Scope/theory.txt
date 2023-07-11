@@ -1,0 +1,24 @@
+===========================Function Scope and Block Scope=========================================
+
+1. What is the scope of the varible or function?
+2. What is hoisting in Javascript?
+3. How does block scope works?
+
+--------------------------------------Answers------------------------------------------------------
+
+1. What is the scope of the varible or function?
+
+    ans: Scope of variable is the life-time or availability of a variable
+
+
+2. What is hoisting in Javascript?
+
+    ans: It is the behaviour of Javascript where all the decalration will moved to the top of the current scope (current script/current function).
+    This Means that we can use  variable or function before it has been declared.
+
+    Note: The variable declared with var are only get hoisted, as using let and const will not support hoisting 
+
+3. How does block scope works?
+
+    It is nothing but the brackets{}, an if condition, for loop, do while loop etc, which creates a seprate scope for decalration existing in that block. This can be acheived when we declare the variable with 'let' keyword.
+

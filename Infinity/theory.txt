@@ -1,0 +1,35 @@
+================================== Questions =======================================
+
+Q.1) How will you put a validation for positive or negative Infinity?
+
+Q.2) What will be the output of this code?
+                Code:
+                console.log(1/0);
+
+
+==================================Answers =======================================
+
+-----Basic of "Infinity" and "-Infinity" concept
+
+            > In JavaScript, "Infinity" is a special numeric value that represents infinity.
+            > It is used to indicate numbers that are too large to be represented within the numerical limits of the JavaScript number data type
+        Some KEY POINTS
+            > Positive Infinity:
+                                > Positive Infinity is represented by the value "Infinity" in JavaScript. 
+                                > It is used to denote a number that exceeds the maximum representable value.
+            > Negative Infinity:
+                                > Negative Infinity, represented by "-Infinity" in JavaScript.
+                                >used to denote a number that is extremely negative, beyond the minimum representable value.
+            > Mathematical Operations:
+                                  When certain mathematical operations result in a value that exceeds the numeric limits, 
+                                  JavaScript returns Infinity
+
+            It's important to note that Infinity is a special value in JavaScript and is not a regular numeric value. 
+            It is primarily used to handle scenarios involving extremely large or small numbers or to indicate a 
+            mathematical concept of infinity within JavaScript calculations.
+
+
+
+Q1)  Refer Code 1 in index.js
+
+

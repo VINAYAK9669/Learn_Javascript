@@ -1,0 +1,5 @@
+
+Different Styling of the array
+
+let arr=[4,7,9]
+console.log(arr);

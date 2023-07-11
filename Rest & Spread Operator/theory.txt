@@ -1,0 +1,92 @@
+================================== Questions =======================================
+
+Q.1) Can we use arguments object in arrow function?
+
+Q.2) Which is the best way to create new arrays with assignment?
+
+Q.3) How can you handle the “n” number of parameters passed to a function ? or 
+     create a function which can take any number of parameters and returns sum or max or any other such calculative values.
+
+Q.4) Can the rest operator be placed anywhere in the function parameter list? 
+                        Or
+      function test(...a,b){
+         //statements
+      }
+    Is this piece of code valid? Give the reason.
+
+Q5) Difference between rest and spread operator?
+
+    
+
+
+================================== Answers =======================================
+
+Q1) 
+
+No, the "arguments" object is not available in arrow functions. 
+If you need to access function arguments within an arrow function, you should consider using the rest parameter syntax (...args) instead.
+The rest parameter allows you to gather all remaining arguments into an 'array', which can be accessed within the arrow function's body. 
+
+Here's an example: Refer Code 1 in index.js file
+
+
+Q2) 
+
+Spread syntax is the best way to create new arrays with assignment
+
+Spread syntax (...):
+
+#Pros: Concise and easy to read. Works well for cloning arrays and can also be used to merge multiple arrays.
+#Cons: May not be supported in older environments or may require transpilation in certain scenarios.
+
+
+Example: Refer code 2 and 3
+
+
+Q3) 
+
+To handle an arbitrary number of parameters passed to a function, you can use the rest parameter syntax "(...args)"
+
+The rest parameter allows you to represent an indefinite number of arguments as an array, which you can then manipulate within the function
+
+Example: Refer Code: 4
+
+
+Q4)
+
+No, the rest parameter (using the ... syntax) must always be the last parameter in a function's parameter list.
+
+It collects the remaining arguments into an array, so it wouldn't make sense to have additional parameters after the rest parameter.
+
+The correct syntax would be
+function test(b, ...a) {
+  //statements
+}
+
+
+Q5)
+
+The rest and spread operators in JavaScript are both represented by the same three-dot syntax (...), 
+but they have different uses and behaviors.
+
+Rest Operator:
+
+>> Syntax: ...variableName
+
+>> Used in function parameters to collect multiple arguments into an array.
+
+>>Collects the remaining arguments into an array, providing a convenient way to handle an arbitrary number of arguments passed to a function.
+
+>>Can only be used as the last parameter in a function's parameter list.
+
+Example: Refer CODE 1
+
+Spread Operator:
+
+>> Syntax: ...arrayName or ...iterable
+>> Used to expand an array or an iterable (such as a string or NodeList) into individual elements.
+>> Allows you to split an array into individual elements or combine multiple arrays/iterables into a new array.
+>> Can be used in various contexts, like function arguments, array literals, or array concatenation.
+
+Example:Refer CODE 3
+

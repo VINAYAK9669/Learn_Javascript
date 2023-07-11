@@ -1,0 +1,17 @@
+================================== Questions =======================================
+
+1. What is the difference between "null" and "Undefined" in javaScript?
+
+        Ans: 
+
+            Undefined: Before any value is assigned to a variable in javascript, the variable contains 'Undefined'.
+
+            Null : When we want a varaible or Object as empty then we assign 'null' to a variable or object.
+
+
+2.What will be the output of (undefined==null) and (undefined===null)
+
+        Ans:
+
+            Undefined == null >>>true
+            Undefined === nul >>>false

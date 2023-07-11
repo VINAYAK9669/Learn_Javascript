@@ -1,0 +1,36 @@
+================================== Questions =======================================
+
+Q.1) Explain the syntactical features of arrow function.
+Q.2) Why “this” does not work in arrow function?
+Q.3) Explain output of following code with reason.
+        const obj={
+                    method:()=>{
+                    console.log(this);  // Refer window object
+                    } 
+                  }
+Q.4) How can you handle arguments object like functionality in arrow function?
+Q.5) Can you write IIFE with arrow function syntax?
+
+================================== ANSWERS =======================================
+
+Q1)
+        > Arrow functions provide a shorter syntax compared to traditional function expressions.
+        > If the function body consists of a single expression, you can omit the curly braces "{}" and the "return" keyword.
+        > Example: Refer CODE 1: syntactical features of arrow function
+
+Q2)
+
+        > In arrow functions, the this keyword does not work as it does in regular functions
+        > This behavior is intentional
+        > We already have class keyword to deal with the classes, so we do not need the function to act as a class. 
+              > For this Refer Example: CODE: 2- regular function as class
+        > Arrow functions have what is called "lexical scoping" or "lexical this." 
+          Unlike regular functions, arrow functions do not bind their own "this" value 
+          but instead inherit the this value from the surrounding context in which they are defined. 
+          This means that the value of this inside an arrow function is determined by the enclosing scope where the arrow function is declared, 
+          rather than how it is called. 
+
+Q4) using rest operator (...)
+
+Q5) IIFE- Immediately Invoked Function Expression 
+        > Yes, we can write IIFE with arrow function
