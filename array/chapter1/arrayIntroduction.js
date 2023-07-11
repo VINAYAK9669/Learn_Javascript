@@ -20,6 +20,6 @@ let arrayLiteral = [
   { pCode: 2, pName: "Banana" },
   { pCode: 3, pName: "Orange" },
 ];
-console.log(""arrayLiteral);
+console.log("" + arrayLiteral);
 console.log(arrayLiteral[0]);
 console.log(arrayLiteral[0].pName);

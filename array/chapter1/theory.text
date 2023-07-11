@@ -1,5 +1,23 @@
+Q.1) What is the difference between for...in and for...of ?
+>>>  for...in loop which gives a index as a output
+>>> for__of loop will gives a value as a output
 
-Different Styling of the array
+Q.2) What will be the output of the below code ?
+let array = ["Vinayak", "Ashwini", "Sheela", "Meenaxi"];
+array.forEach((element, index)
+{
+    console.log(element,index);
+    if(index==2)
+    {
+        break;
+    }
+}) 
 
-let arr=[4,7,9]
-console.log(arr);
+>>>>> iLLEGAL break statement
+
+Q.3) What will be the output of below statements ?
+ 
+>>>>  let arr=[7,9,0];
+console.log(arr[arr.length]);
+>>>> Undefined
+   
