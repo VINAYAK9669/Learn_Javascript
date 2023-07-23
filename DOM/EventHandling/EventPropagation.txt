@@ -1,0 +1,36 @@
+In this we will understand what are the 
+ 1) Event Bubbling
+ 2) Event Capturing
+ 3) Event Propagation
+
+ Note: 
+
+ * Event bubbling and event capturing are two different mechanisms for handling events 
+   that occur on DOM elements. 
+ * Event propagation refers to the process of how events are propagated through the DOM tree. 
+
+ 1) Events Bubbling
+
+    * It is the default behaviour in JS when event is triggered on an element nested inside the other element.
+    * When an event occurs on target element, it will trigger the event handlers of the target element
+      itselt then to its parent element until reaches the root element.
+
+            Event Propagation:  Bottom to Top
+
+2) Event Capturing:
+
+   * Event capturing, also known as event trickling or event propagation in the capturing phase, 
+     is the opposite of event bubbling.
+  *  This is not the default behavior in modern browsers and is not widely used.
+
+           Event Propagation:  TOP to Bottom
+
+
+3) Event Propagation:
+
+    Event propagation refers to the way events are passed and triggered through the DOM tree, either through 
+    event bubbling or event capturing.
+
+    Event propagation can be controlled using the addEventListener method's third argument, 
+    which specifies the event's propagation type: true for capturing phase, false (default) for bubbling phase, 
+    or an object with {capture: true} or {capture: false}.
