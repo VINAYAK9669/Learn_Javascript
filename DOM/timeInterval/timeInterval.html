@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Time Intervals</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      /* justify-content: center; */
+      /* align-items: center; */
+    }
+    .container {
+      /* display: flex; */
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      max-width: 500px; /* Adjust the width to your desired value */
+      height: fit-content; /* Adjust the height to your desired value */
+      background-color: #f0f0f0; /* Just to visualize the centered div */
+      text-align: center;
+      border-radius: 11px;
+      padding: 1rem;
+    }
+    .btns {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 1.5rem;
+    }
+    .btn {
+      display: flex;
+      justify-content: center;
+      width: 88px;
+      padding: 0.2rem;
+      border-radius: 8px;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="counterDisplay">
+        <h1 id="displayInfo">0</h1>
+      </div>
+      <div class="btns">
+        <button class="btn" id="start">Start</button>
+        <button class="btn" id="stop">Stop</button>
+      </div>
+    </div>
+  </body>
+  <script>
+    const startBtn = document.getElementById("start");
+    const stopBtn = document.getElementById("stop");
+    const display = document.getElementById("displayInfo");
+    const container = document.querySelector(".container");
+    let IntervalId;
+    let clickEnabled = true;
+    let startTimeOut = false;
+    let count = 0;
+
+    startBtn.addEventListener("click", startInterval);
+    stopBtn.addEventListener("click", stopInterval);
+
+    // creating function startInterval
+    function startInterval() {
+      if (clickEnabled) {
+        display.textContent = count;
+        // to stop this setInterval we need ID
+        IntervalId = setInterval(() => {
+          count++;
+          display.textContent = count;
+        }, 1000);
+      }
+      clickEnabled = false;
+      startTimeOut = true;
+      if (startTimeOut) {
+        setTimeout(() => {
+          container.style.backgroundColor = `#${count * 4}0${count}`;
+        }, 5000);
+      }
+    }
+    function stopInterval() {
+      clearInterval(IntervalId);
+      clickEnabled = true;
+    }
+
+    // Now we will change the background color once the time out
+  </script>
+</html>
