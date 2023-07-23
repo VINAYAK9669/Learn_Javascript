@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Handling</title>
+  </head>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    body {
+      display: flex;
+      flex-direction: column;
+      gap: 5rem;
+      max-width: 300px;
+      margin: 0 auto;
+      margin-top: 10%;
+      text-align: center;
+    }
+    .bubbling__container,
+    .capturing__container {
+      border: 2px solid black;
+      width: 200px;
+      height: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 8px;
+    }
+  </style>
+  <body>
+    <div class="bubbling__container">
+      <div class="outer" onclick="outerFunction()">
+        <p>Here propagation is BOTTOM to TOP</p>
+        <br />
+        <button onclick="innerFunction()" id="1">Bottom-Top</button>
+      </div>
+    </div>
+    <div class="capturing__container">
+      <div class="outer">
+        <p>Here propagation is TOP to BOTTOM</p>
+        <br />
+        <button id="2">TOP-BOTTOM</button>
+      </div>
+    </div>
+    <div class="bubbling__container">
+        <div class="outer" onclick="outerFunction1()">
+          <p>Here propagation do not propogate</p>
+          <br />
+          <button onclick="innerFunction1()" id="1">Bottom-Top</button>
+        </div>
+  </body>
+  <script>
+    const btn2 = document.getElementById("2");
+    capElement = document.querySelector(".capturing__container");
+    function outerFunction() {
+      alert("Outer Element Clicked");
+    }
+    function innerFunction() {
+      alert("Inner Element Clicked");
+    }
+    function outerFunction1() {
+     
+      alert("Outer Element Clicked");
+    }
+    function innerFunction1() {
+    //stop propagating
+     event.stopPropagation();
+      alert("Inner Element Clicked");
+    }
+
+    //Now we will do the event propagation using addEventListener
+    window.onload = function () {
+      btn2.addEventListener("click", innerFunction, true);
+      capElement.addEventListener("click", outerFunction, true);
+    };
+  </script>
+</html>
