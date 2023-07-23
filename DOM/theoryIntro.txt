@@ -1,0 +1,78 @@
+Question 1 What is the difference between window and document ?
+Question 2 What is DOM [Document Object Model] or  DOM API ?
+Question 3 What is BOM [Browser Object Model] ?
+Question 4 Explain the difference between DOM and BOM ?
+Question 5 Which is the global object in browser ?
+Question 6 How will we check the innerWidth and innerHeight of window ?
+Question 7 How will you get hostname or value typed in address bar ?
+--------------------------------------------------------------
+
+Answer 1) 
+
+      window: Represents the browser window and acts as the global scope for JavaScript code.
+      document: Represents the current HTML document loaded in the browser and allows manipulation 
+                of its content using the DOM.
+        
+      ADDITIONAL INFORMATION ABOUT WINDOW: 
+
+      * It provides various properties and methods related to the browser window, 
+        such as alert(), setTimeout(), setInterval(), etc.
+
+      * Window also contains information about the current URL, location, history, and more.
+
+Answer 2) 
+
+      DOM 
+            is a programming interface for web documents, representing the HTML or XML document 
+            as a tree-like structure. 
+
+      DOM API
+
+            provides methods to interact with and manipulate the document using JavaScript or other 
+            scripting languages.
+
+            Some of the Scripting languages that work with DOM are, 
+             1) JavaScript
+             2) Python
+             3) PHP
+             4) Ruby
+             5) Java
+             6) Perl
+      It's important to note that while some languages like JavaScript have native support for DOM manipulation, 
+      others require external libraries to achieve similar functionality.
+             
+
+Answer 3 & 4)
+      * BOM stands for Browser Object Model. 
+      * It is a programming interface provided by web browsers that allows developers to interact with and 
+        manipulate the browser window and its components, such as the document, frames, history, location, and navigator.
+      * With the BOM, developers can perform actions like modifying the URL, opening new browser windows, 
+        accessing browser history, and handling events related to browser actions.
+      * While the DOM handles the structure and content of the webpage, the BOM deals with browser-specific 
+        functionality and interaction.
+      * BOM can vary slightly between different web browsers, as each browser implements its own version 
+        of the BOM. But,  DOM is standardized by the World Wide Web Consortium (W3C), 
+      * DOM represents the hierarchical structure, wherein BOM does not have a strict hierarchy like the DOM.
+
+Answer 5) 
+      In the browser, the global object is called "window." 
+
+                                                Window
+                                                  ↓
+                        -----------------------------------------------------------------
+                        DOM                                                           JavaScript
+                        ↓                               ↓                               ↓
+                        document                     BOM                        JavaScript Functionalities
+                        ↓                            ↓
+                        <html>                       Screen
+            ↓                    ↓                   Location
+            <head>              <body>               Navigator
+            ↓                  ↓                     Frames
+            <title>           <a>    <h1>            Histroy
+                                                     XML HttpRequest
+
+ Answer 6) 
+
+     >>  windowProperties.js>>EXECRCISE -1 
+
+    
