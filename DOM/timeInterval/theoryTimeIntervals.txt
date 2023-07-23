@@ -1,0 +1,37 @@
+Question:
+   Which are the time based Intervals in JavaScript, explain them in brief.
+
+Answer: There are 4 time based events 
+        1) setInterval()
+           This function repeatedly calls a specified function or executes a code block with a 
+           fixed time delay between each call. It continues until clearInterval() is called 
+           or the window is closed.
+
+           SYNTAX: 
+           setInterval(function, milliseconds, param1, param2, ...);
+
+        2) clearInterval()
+           * This method is used to stop the execution of the function that was set to run at a 
+             specific interval using setInterval().
+           * It takes the interval ID  
+
+           SYNTAX: 
+           clearInterval(intervalID);
+
+        3) setTimeout()
+
+           * SYNTAX: 
+             setTimeout(function, milliseconds, param1, param2, ...);
+
+           * This method executes the specified function after a given delay (in milliseconds) 
+             and only runs once.
+
+        4) clearTimeout()
+
+          * clearTimeout(timeoutID);
+
+          * This method is used to cancel the execution of a function that was set to run 
+             after a certain delay using setTimeout().
+         *  It takes the timeout ID returned by setTimeout() as an argument.
+
+1) 
