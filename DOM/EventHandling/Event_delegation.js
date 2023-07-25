@@ -1,3 +1,10 @@
+<!-- 
+  * Event delegation is a technique in web development where instead of attaching event 
+    handlers to individual elements, you attach them to a common parent element. 
+  * The parent element then listens for events that are triggered by its child elements. 
+  * When an event occurs, the parent element can identify the specific child element that 
+    triggered the event and execute the appropriate event handler. 
+  -->
 <!DOCTYPE html>
 <html>
   <head>
