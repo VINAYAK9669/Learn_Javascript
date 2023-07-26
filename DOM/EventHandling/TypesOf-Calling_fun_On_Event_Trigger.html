@@ -1,0 +1,70 @@
+// This will demonstrate the ways that we can call a function when event occurs
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      max-width: fit-content;
+      margin: 0 auto;
+      margin-top: 5rem;
+      gap: 1rem;
+    }
+    .btns {
+      display: inline-flex;
+      column-gap: 1rem;
+      margin-top: 2rem;
+    }
+    .btns .btn {
+      padding: 0.2rem 1rem;
+      background-color: rgb(157, 223, 157);
+    }
+  </style>
+  <body>
+    <div class="container">
+      <h2>This will show the way we can call function when event occurs</h2>
+      <div class="btns">
+        <!-- Function called and defined inline -->
+        <button class="btn" onclick="alert('Inline defined function Called')">
+          Inline call
+        </button>
+        <!-- function called only by its name -->
+        <button class="btn" onclick="funCall()">Call Function</button>
+        <!-- function created later and called using the method onclick -->
+        <button class="btn btn-3">Create Function later</button>
+        <!-- function created later and called using addEventListener -->
+        <button class="btn btn-4">Create Funtion later by Listener</button>
+      </div>
+    </div>
+  </body>
+  <script>
+    //2
+    function funCall() {
+      alert(" Function called with Name only");
+    }
+
+    //3
+    const btn3 = document.querySelector(".btn-3");
+    btn3.onclick = function () {
+      alert(
+        "function called using onclick method after creating its own varible"
+      );
+    };
+    //4
+    const btn4 = document.querySelector(".btn-4");
+    btn4.addEventListener("click", () => {
+      alert("Called function using add Event Listner");
+    });
+  </script>
+</html>
