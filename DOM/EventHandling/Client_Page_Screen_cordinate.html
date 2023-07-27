@@ -1,0 +1,83 @@
+<!-- 
+  HOW TO OBTAIN THE CO-ORDINATES OF THE MOUSE EVENT 
+
+  
+   In JavaScript, the terms "clientX/clientY," "pageX/pageY," and "screenX/screenY" are used to obtain 
+   the coordinates of a mouse click or other events on a web page. 
+
+  * clientX/clientY:
+     - Provide the co-ordinate of the events relative to the viewport (visible portion of the web page)
+     - The origin is at top-left corner
+     - Useful for determining the exact position of the mouse or touch event within the visible area 
+       of the browser window.
+     - Commonly used for tracking cursor positions, implementing drag-and-drop functionality, 
+       or creating interactive elements that respond to mouse clicks within the visible area.
+  
+  * pageX/pageY
+    - Provides the co-ordinate of the events relative to the entire document/page
+    - while calculating co=ordintate it includes scrolled or clipped area
+    - Orgin is at top left corner
+    - Can be used to create elements that follow the cursor across the entire page, 
+      build tooltips or context menus at the exact location of the event, etc.
+
+  * screenX/screenY
+   - Provides the co-ordinate of the events relative to the user's screen
+   - The origin of this co-ordinate sytem is at the top-left corner
+
+  * 
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mouse Co-ordinates</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    .section {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      width: 150vh;
+      row-gap: 1rem;
+      background-color: bisque;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      height: 300px;
+      border: 2px solid black;
+      max-width: 500px;
+      min-width: 450px;
+      justify-content: center;
+      align-items: center;
+      border-radius: 8px;
+      text-align: center;
+      gap: 1rem;
+    }
+  </style>
+  <body>
+    <div class="section">
+      <div class="container">
+        <div class="box">Click In this Box, Not Exactly On me</div>
+      </div>
+    </div>
+  </body>
+  <script>
+    // access the element container1
+    const container1 = document.querySelector(".container");
+    container1.addEventListener("click", (event) => {
+      const X_cordinate_client = event.clientX;
+      const X_cordinate_page = event.pageX;
+      console.log(event.target.firstElementChild);
+      event.target.firstElementChild.innerHTML = `The Client X is :${X_cordinate_client} <br> The Page X is :${X_cordinate_page}
+           <br> <br> Move this box at our left so that left border get merge into viewport and now observe each value`;
+    });
+  </script>
+</html>
