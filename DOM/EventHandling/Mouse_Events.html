@@ -1,0 +1,138 @@
+<!-- 
+  Below are some of the important mouse events commonly used in programming:
+
+  1) click:
+     This event is triggered when the user clicks the left mouse button.
+
+  2) dblclick
+     This event is triggered when the user double-clicks the left mouse button.
+  
+  3) mousedown
+      This event is triggered when the user presses down the mouse button, 
+      regardless of which button is pressed.
+      It does not require the user to release the mouse button; 
+      it only cares about the initial press.
+    
+  4) mouseup
+     This event is triggered when the user releases the mouse button after pressing it.
+    
+  5) mousemove
+     This event is triggered when the user moves the mouse pointer within a specified element.
+
+  6) mouseover: 
+     This event is triggered when the mouse pointer enters the area of a specified element.
+  
+  7) mouseout
+     This event is triggered when the mouse pointer leaves the area of a specified element
+  
+  8) contextmenu
+     This event is triggered when the user right-clicks to open the context menu.
+  
+  9) mouseenter
+     This event is triggered when the mouse pointer enters the area of a specified element. 
+     Unlike mouseover, this event doesn't bubble up to parent elements.
+
+  10) mouseleave
+     This event is triggered when the mouse pointer leaves the area of a specified element. 
+     Unlike mouseout, this event doesn't bubble up to parent elements.
+ -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mouse Event</title>
+  </head>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      row-gap: 0.8rem;
+      padding: 1rem;
+      border: 2px solid black;
+      max-width: max-content;
+      margin: 0 auto;
+      margin-top: 5rem;
+      border-radius: 11px;
+    }
+    .container .btn {
+      width: 350px;
+      padding: 0.5rem;
+      border-radius: 1rem;
+    }
+    .yellow {
+      background-color: yellow;
+      color: blue;
+    }
+    .btn input {
+      padding: 0.3rem;
+      border-radius: 8px;
+      width: 300px;
+    }
+  </style>
+  <body>
+    <div class="container_click_events container">
+      <h2>Demo of Different Click Events</h2>
+      <button class="btn click" onclick="clickFun()">
+        Click to see the Change- only left mouse button, and it should be
+        released
+      </button>
+      <button class="btn dbclick" ondblclick="dbclickFun()">
+        Double Click to see the the change
+      </button>
+      <button class="btn mousedown" onmousedown="mousedownFun()">
+        press any mouse button No matter If you released it or not
+      </button>
+      <button class="btn mouseup" onmouseup="mouseupFun()">
+        Release the mouse button once clicked to see the changes- Use any mouse
+        button
+      </button>
+    </div>
+
+    <div class="container_move_events container">
+      <h2>Demo of Different Move Events</h2>
+      <button class="btn mouseOver" onmouseover="mouseOver()">
+        Move a cursor On Me
+      </button>
+      <button class="btn mouseOut" onmouseout="mouseOut()">
+        Move a cursor on Me, and move it out and see the changes
+      </button>
+    </div>
+  </body>
+  <script>
+    function clickFun() {
+      const clickElemnt = document.querySelector(".click");
+      clickElemnt.classList.toggle("yellow");
+    }
+    function dbclickFun() {
+      const clickElemnt = document.querySelector(".dbclick");
+      clickElemnt.classList.toggle("yellow");
+    }
+    function mousedownFun() {
+      const clickElemnt = document.querySelector(".mousedown");
+      clickElemnt.classList.toggle("yellow");
+    }
+
+    function mouseupFun() {
+      const clickElemnt = document.querySelector(".mouseup");
+      clickElemnt.classList.toggle("yellow");
+    }
+
+    function mouseOver() {
+      const mouseOverElement = document.querySelector(".mouseOver");
+      mouseOverElement.classList.toggle("yellow");
+    }
+
+    function mouseOut() {
+      const mouseOutElement = document.querySelector(".mouseOut");
+      mouseOutElement.classList.toggle("yellow");
+    }
+  </script>
+</html>
