@@ -1,0 +1,56 @@
+<!--
+  The Key Events are 
+  
+    1) keydown- This event is triggered when a key on the keyboard is pressed down
+    2) keyup - This event is triggered when a key on the keyboard is released.
+    3) keypress-This event is triggered when a key on the keyboard is released.
+
+ -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Key Press Display</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        font-family: Arial, sans-serif;
+      }
+      #display {
+        padding: 20px;
+        border: 2px solid #ccc;
+        border-radius: 5px;
+        font-size: 24px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="display">Press any key</div>
+    <div class="display1"></div>
+  </body>
+  <script>
+    // Get the display element
+    const displayElement = document.getElementById("display");
+
+    // Function to handle keydown event
+    function handleKeyDown(event) {
+      // Get the key that was pressed
+      const key = event.key;
+
+      // Display the pressed key on the page
+      displayElement.textContent = `Pressed Key: ${key}`;
+    }
+    function handleKeyUp(event) {
+      if (event.ctrlKey && event.code === "KeyZ") {
+        alert("You have Entered CONTROL+Z");
+      }
+    }
+
+    // Attach the event listener to the document
+    document.addEventListener("keydown", handleKeyDown);
+    document.addEventListener("keyup", handleKeyUp);
+  </script>
+</html>
