@@ -1,0 +1,126 @@
+<!-- 
+  * Input Element events
+
+  1) oninput: 
+     - This event is triggered whenever the value of an input element changes. 
+     - It is useful for scenarios where you want to provide real-time feedback 
+       or validation as the user is typing, without waiting for the input to lose focus.
+
+  2) onfocus
+    - This event is triggered when an input element gains focus, usually when the user clicks or tabs into the input.
+    - It can be used for validation purposes or to trigger actions when the user starts interacting with the input field.
+
+  3) onblur
+   - This event is triggered when an input element loses focus, often when the user clicks outside the input or tabs to a different element.
+   - It is commonly used for validation purposes or to trigger actions when the user finishes entering data into the input field.
+  
+   4)onchange
+   - This event is triggered when the value of an input element is changed, and it loses focus
+   - This event is triggered when the value of an input element is changed, and it loses focus
+   - You can use it when you want to perform an action after the user has made a selection or finished entering data.
+ -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Input Element</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border: 2px solid black;
+      background: linear-gradient(
+        rgba(234, 164, 51, 0.849),
+        rgb(184, 229, 184),
+        blue
+      );
+      height: 500px;
+      width: 500px;
+    }
+    .container input {
+      width: 300px;
+      height: 1.8rem;
+      margin: auto;
+      border: 2px solid black;
+      padding: 1rem;
+      border-radius: 8px;
+    }
+    p {
+      text-align: center;
+      margin-top: auto;
+    }
+    .container select {
+      width: 150px;
+      margin: auto;
+      /* height: 1.5rem; */
+      text-align: center;
+      padding: 0.5rem;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <p class="optionSelected"></p>
+      <p class="display"></p>
+      <p class="LiveData"></p>
+      <p class="radioButton"></p>
+      <select name="options" id="options" onchange="onchangeFun(event)">
+        <option value="1">Select 1</option>
+        <option value="2">Select 2</option>
+        <option value="3">Select 3</option>
+        <option value="4">Select 3</option>
+      </select>
+      <input
+        type="text"
+        onfocus="onFocusFun()"
+        onblur="onBlurFun()"
+        oninput="onInputFun(event)"
+      />
+      <input
+        type="radio"
+        id="option1"
+        name="options"
+        onchange="handleRadioChange()"
+      />
+    </div>
+  </body>
+  <script>
+    const displayElemet = document.querySelector(".display");
+    const LiveData = document.querySelector(".LiveData");
+    const option = document.querySelector(".optionSelected");
+    const radioButton = document.querySelector(".radioButton");
+    function onFocusFun() {
+      displayElemet.innerHTML = "You are now INSIDE the Input Field";
+    }
+    function onBlurFun() {
+      displayElemet.innerHTML = "You are now OUTSIDE of the Input Field";
+    }
+    function onInputFun(event) {
+      LiveData.innerHTML = `${event.target.value}`;
+      // console.log(event.target.value);
+    }
+    function onchangeFun(event) {
+      option.innerHTML = `Option selceted is: ${
+        event.target.options[event.target.selectedIndex].textContent
+      }`;
+    }
+
+    function handleRadioChange() {
+      const option1 = document.getElementById("option1");
+
+      if (option1.checked) {
+        radioButton.innerHTML = "Radio Button has checked";
+      }
+    }
+  </script>
+</html>
