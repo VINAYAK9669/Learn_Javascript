@@ -1,0 +1,67 @@
+<!-- * Oncut, Onpaste, oncopy Events -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: coral;
+      width: 500px;
+      height: 300px;
+      border-radius: 11px;
+      align-items: center;
+    }
+    input {
+      width: 300px;
+      margin: auto;
+      padding: 0.8rem;
+      border-radius: 8px;
+    }
+    .displayMsg {
+      margin: auto;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <h2 class="displayMsg">Event:</h2>
+      <!-- This will show the just how we can use events -->
+      <h4>Shows Default Behaviour</h4>
+      <input
+        type="text"
+        oncut="eHandler(`Event: Cut Event Fired`)"
+        oncopy="eHandler(`Event: Copy Event Fired`)"
+        onpaste=" eHandler(`Event: Paste Event Fired`)"
+        class="input"
+      />
+      <!-- How we can make changes in the default behaviours of above events -->
+      <h4>Shows Modified Behaviour</h4>
+      <input
+        type="text"
+        oncut="return false"
+        oncopy="event.preventDefault()"
+        onpaste=" eHandler(`Event: Paste Event Fired`)"
+        class="input"
+      />
+    </div>
+  </body>
+  <script>
+    function eHandler(msg) {
+      document.querySelector(".displayMsg").innerHTML = msg;
+    }
+  </script>
+</html>
