@@ -1,0 +1,67 @@
+<!-- Here is the example which illustrate how we can create our custom elements
+     and use it in html file. This inlcudes the concept of the web document
+
+     Question: 1) Explain what is web component and how can you create it?
+             - Web component is basically the HTML, CSS and Javascript combination which you
+               can combine.encapsulat inside a component/container which can perform/function
+               independantly.
+
+    Question 2) Creating a component means
+             - Create a class,
+             - Extend it from HTMLElement base class
+             - Define the required HTML for your component in constructor() -[later with HTML template]
+             - Define the custom element using the customElements.define method
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WEB DOCUMENT</title>
+  </head>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+    body {
+      height: 100vh;
+    }
+    .container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: darkgray;
+      height: 300px;
+      width: 350px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-radius: 8px;
+    }
+    .btns {
+      display: flex;
+      column-gap: 2rem;
+      width: 300px;
+      justify-content: center;
+      align-items: center;
+      background-color: beige;
+      padding: 0.8rem;
+      border-radius: 8px;
+    }
+    .btn {
+      padding: 0.8rem;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <h1>Login Page</h1>
+      <login-page></login-page>
+    </div>
+  </body>
+
+  <script src="login.js"></script>
+</html>
