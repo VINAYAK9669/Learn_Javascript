@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Component</title>
+    <style>
+      h1 {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Header Section</h1>
+    <product-card
+      pName="Apple"
+      price="$40"
+      pImg="https://www.freepnglogos.com/uploads/apple-png/vector-graphic-apple-fruit-nature-red-juicy-36.png"
+      pStatus="Not Sold"
+    >
+    </product-card>
+    <product-card
+      pName="Orange"
+      price="$30"
+      pImg="https://www.freepnglogos.com/uploads/lime-png/vector-graphic-lime-fruit-food-acidic-citrus-image-pixabay-21.png"
+      pStatus="Not Sold"
+    >
+    </product-card>
+    <product-card
+      pName="Grapes"
+      price="$20"
+      pImg="https://www.freepnglogos.com/uploads/grapes-png/illustration-grapes-vine-vineyard-wine-29.png"
+      pStatus="Not Sold"
+    >
+    </product-card>
+    <product-card
+      pName="Banana"
+      price="$23"
+      pImg="./banana-file-bananas-svg-wikimedia-commons-32.png"
+      pStatus="Not Sold"
+    >
+    </product-card>
+
+    <script>
+      const template = document.createElement("template");
+      template.innerHTML = `
+                <style>
+                    img{
+                        width: 60%;
+                        height: 200px;
+                        margin: 20%;
+                        margin-bottom: 5%;
+                    }
+                    
+                    .card{
+                        margin-right: 35px;
+                        display: inline-block;
+                        width: 300px;
+                        height: 440px;
+                        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+                    }
+                    .container{
+                        padding: 2px 16px;
+                    }
+                    .btn{
+                        width: 100%;
+                        padding: 10px;
+                        margin-top: 2%;
+                        margin-bottom: 8%;
+                        background-color: rgb(40, 140, 255);
+                        color: rgb(255, 255, 255);
+                    
+                        border: none;
+                    }
+                    
+                    #p-container{
+                        padding-left: 50px;
+                    }
+                    #header{
+                        width: 99%;
+                        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+                        padding: 10px;
+                    }
+                    #title{
+                        color: rgb(140, 140, 140);
+                        margin: 25px;
+                    }
+                    
+                </style>
+                <div class="card">
+                   <img />
+                   <div class="container">
+                       <h3> </h3>
+                       <p> </p>
+                       <button class="btn"> Buy </button>
+                   </div>
+               </div>
+        `;
+
+      class ProductCard extends HTMLElement {
+        constructor() {
+          super();
+          this.attachShadow({ mode: "open" });
+          this.shadowRoot.appendChild(template.content.cloneNode(true));
+          this.shadowRoot.querySelector("h3").innerText =
+            this.getAttribute("pName") + ", " + this.getAttribute("price");
+          this.shadowRoot.querySelector("img").src = this.getAttribute("pImg");
+          this.shadowRoot.querySelector("p").innerText =
+            this.getAttribute("pStatus");
+        }
+      }
+
+      window.customElements.define("product-card", ProductCard);
+    </script>
+  </body>
+</html>
