@@ -2,14 +2,6 @@
   This HTML document demonstrates how to use an HTML <template> element to create
   and display product cards dynamically. The goal is to show multiple product
   cards (in this case, Apple and Banana) side by side using Flexbox and a template.
-
-  The product card template is defined inside the <template> element, and then
-  JavaScript is used to clone the template, populate it with data, and append it
-  to the product container, displaying the product cards on the webpage.
-
-  The product cards are wrapped inside a flex container (.productCard) to ensure
-  they are displayed side by side, and they will wrap to the next line when the
-  container width is not wide enough to fit them all in a single row.
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -43,6 +35,7 @@
         padding: 2rem;
         transition: 0.8s;
         /* overflow: hidden; */ /* Optional: Uncomment to hide any overflowing content */
+        background-color: rgb(219, 219, 111);
       }
       .container:hover {
         transform: scale(0.8); /* Apply scale transformation on hover */
@@ -60,28 +53,29 @@
     </style>
   </head>
   <body>
-    <!-- Step 5: Define the template for the product cards -->
+    <!-- Define the template for the product cards -->
     <template id="productCardTemplate">
       <div class="container">
         <div class="card">
           <h1 class="title"></h1>
-          <img src="https://tinyurl.com/2p8n6y95" alt="" />
+   <!--IMPORTANT: here mix-blend-mode: darken will remove the background  -->
+          <img src="" alt="" style="mix-blend-mode: darken" />
           <p class="description"></p>
         </div>
       </div>
     </template>
 
-    <!-- Step 6: Create a container to hold the product cards -->
+    <!--  Create a container to hold the product cards -->
     <div id="productCard">
       <!-- New product details will be inserted here -->
     </div>
 
     <script>
-      // Step 7: Get the template content and the product container by their IDs
+      // Get the template content and the product container by their IDs
       const template = document.getElementById("productCardTemplate").content;
       const productContainer = document.getElementById("productCard");
 
-      // Step 8: Define the product details to be displayed in the cards
+      // Define the product details to be displayed in the cards
       const productDetails = [
         {
           title: "Apple",
@@ -95,13 +89,14 @@
         },
       ];
 
-      // Step 9: Create a new wrapping container for the cards
+      // Create a new wrapping container for the cards
       const containerDiv = document.createElement("div");
       containerDiv.className = "productCard"; // Add class for styling
 
-      // Step 10: Clone the template and populate it with each product detail
+      //  Clone the template and populate it with each product detail
       productDetails.forEach((current) => {
         const newProductDetails = template.cloneNode(true);
+        // .cloneNode(true) : The cloneNode() method is used to create a copy of an HTML element, including all of its child nodes.
         newProductDetails.querySelector(".title").textContent = current.title;
         newProductDetails.querySelector("img").src = current.src;
         newProductDetails.querySelector(".description").textContent =
@@ -109,7 +104,7 @@
         containerDiv.appendChild(newProductDetails);
       });
 
-      // Step 11: Append the wrapping container with all the cards to the product container
+      //  Append the wrapping container with all the cards to the product container
       productContainer.appendChild(containerDiv);
     </script>
   </body>
