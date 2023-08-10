@@ -22,6 +22,7 @@ Question 3]  When callback functions are used?
 
 Answer: When we want to run a piece of code inresponse to a certain event or at certain point of time then we use callback functions
 
+
 Question 4] Explain the scenarios where callback functions are used?
 
 Answer:           i) Asynchronous Operations
@@ -30,3 +31,16 @@ Answer:           i) Asynchronous Operations
                  iv) Callbacks in APIs
                   v) Promises and Asynchronous Patterns   
                  vi) Higher-Order Functions
+
+Question 5] What is the meaning of the callback hell or pyramid of DOOM?
+
+Answer:           * It Is the situation in asynchronous programming where mutliple layers of nested callbacks or function
+                  calls are use to handle asynchrnous operations
+
+                  * This can result in code that becomes difficult to read, maintain and debug due to its deeply nested 
+                    and convoluted structure.
+
+Refer Exercise: A > Code-3
+
+
+
