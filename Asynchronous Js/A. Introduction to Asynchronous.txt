@@ -16,3 +16,17 @@ Question 2] The techniques/ the ways by which we can achieve Asynchronous progra
 Answer:  1)  Callbacks
          2)  Promises
          3)  Async/Await
+
+
+Question 3]  When callback functions are used?
+
+Answer: When we want to run a piece of code inresponse to a certain event or at certain point of time then we use callback functions
+
+Question 4] Explain the scenarios where callback functions are used?
+
+Answer:           i) Asynchronous Operations
+                 ii) Event Handling
+                iii) Timers and Intervals
+                 iv) Callbacks in APIs
+                  v) Promises and Asynchronous Patterns   
+                 vi) Higher-Order Functions
