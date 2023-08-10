@@ -1,0 +1,18 @@
+
+Question 1] What is asynchronous programming in Javascript?
+
+Answer:   * This is the way of code execution, allowing tasks to run independantly. 
+          * To run one part of the program it will not block other part of the programs.
+          * Instead of blocking the entire program while waiting for other tasks to finish, aysnchrounous programming 
+            enables other tasks to continue running, enhancing, overall effieciency and responsiveness.
+Examples: Exmples for the Asynchrnous programming are 
+            1) Fething data from a server
+            2) Waiting for user interaction
+            3) Reading/writing files
+
+
+Question 2] The techniques/ the ways by which we can achieve Asynchronous programming
+
+Answer:  1)  Callbacks
+         2)  Promises
+         3)  Async/Await
