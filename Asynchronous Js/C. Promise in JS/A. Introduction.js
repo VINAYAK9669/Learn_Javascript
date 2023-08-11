@@ -30,6 +30,12 @@
             - You use '.then()' to say what to do when the task is successfull.
             - You use '.catch()' to say what to do when there is an error.
 
+* Question 5) What is the chaining Promises.
+
+           - A powerful features of promises is the ability to chain them together, making complex asychronous operations more readable.
+           - This is done using the '.then()' method which return a new promises. 
+           - This allows you to perform sequential operations.
+
 */
 
 // Exercise 1: Syntax Oriented Program
