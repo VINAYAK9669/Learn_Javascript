@@ -1,0 +1,42 @@
+******************* INTRODUCTION TO ASYNCH AND AWAIT ******************
+
+    * Question-1: What are async and await in Javascript?
+
+            - These are the two keywords introduced to work with asychronous code.
+            - Using these we can write a asychronous code in more managable and redable way.
+            - Async and Await commonly used when dealing with function that return promises.
+
+
+    * Question-2: What are async and await in Javascript?
+   
+            - Async keyword used to define a function as asynchronous.
+            - When we mark a function as "async", it means that the function will always return a promise.
+            - So, because of this the execution of the function will be paused until the promise is resolved or rejected.
+    
+    * Question-3: Provide the syntax of async function?
+    
+            async function fetchData()
+            {
+              * // Asynchronous operations
+                   return somePromise;
+            }
+
+    * Question-4: What is await keyword in JS?
+   
+            - This keyword used inside the asynch function to pause its execution until a promise is resolved.
+            - It can only be used within an async function.
+            - When you use await before a promise, it will wait for that promise to be resolved and then return the 
+              resolved value.
+
+    * Question-5: What is the syntax of await keyword/how to use it       
+   
+            Here how we can use await with asynch function
+            
+                async function someFunction()
+                {
+                const result =await somePromse;
+                return result;
+                }
+            
+
+*/
