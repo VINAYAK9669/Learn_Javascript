@@ -1,0 +1,65 @@
+// =============INTERVIEW QUESTIONS===============================//
+
+/*
+
+Question 1)  Can you write await without async?
+  
+            - No
+            - The await keyword can only be used inside an async function.
+            - Attempting to use it outside an ansync function leads to a syntax error.
+
+Question 2) Do you need to return a promise from an async function?
+
+            - Do not need to return a promise 
+            - As keyword async itself return a promise
+
+Question 3) Do you need to return a promise from an async function?
+
+            - Yes
+            - We can have an async Immediately Invoked Function Expression (IIFE).
+
+
+Question 4) Which is the best way to handle errors with await?
+
+            - The best way to handle error when using 'await' is by using 'try...catch' blocks.
+            - Here is an example:
+
+                    async function fetchData() 
+                    {
+                                    try {
+                                        const response = await fetch('https://api.example.com/data');
+                                        const data = await response.json();
+                                        return data;
+                                    } catch (error) {
+                                        console.error('An error occurred:', error);
+                                        throw error; // Re-throw the error if necessary
+                                    }
+                    }
+
+Question 5) Which is the best way to handle errors with await?
+
+            - Promise.all() is a method that takes  an array of promises 
+            - which then return a promise that resolves to an array of resolved values from the input promises.
+            - It can be used in cunjuction with async and await.
+        
+        Example:
+
+                        async function fetchData() 
+                        {
+                            const promise1 = fetch('https://api.example.com/data1');
+                            const promise2 = fetch('https://api.example.com/data2');
+
+                            try {
+                                const [result1, result2] = await Promise.all([promise1, promise2]);
+                                const data1 = await result1.json();
+                                const data2 = await result2.json();
+                                return [data1, data2];
+                            } catch (error) {
+                                console.error('An error occurred:', error);
+                                throw error;
+                            }
+                        }
+
+
+
+*/
