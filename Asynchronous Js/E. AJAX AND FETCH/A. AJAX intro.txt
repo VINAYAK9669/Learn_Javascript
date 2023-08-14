@@ -1,0 +1,12 @@
+/*
+
+Question 1) What is AJAX in JavaScript ?
+
+            - AJAX stands for Asynchronous JavaScript and XML.
+            - It is the technique in web development that allows you to fetch and display data from a server
+              without refreshing the entire page, leading to more interactive and responsive web applications.
+
+        NOTE: It's worth noting that while the name "XML" is in AJAX, modern web applications often use JSON (JavaScript Object Notation)
+              instead of XML for data interchange due to its lighter weight and better compatibility with JavaScript.
+
+*/
