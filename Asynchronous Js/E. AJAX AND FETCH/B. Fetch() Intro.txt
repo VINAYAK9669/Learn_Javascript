@@ -119,4 +119,6 @@ Answers:
             - .then() method is used to handle the response when it's successful and the .catch()
               method is used to handle any errors that occur during the requests.
 
+NOTE:   The fetch API by default makes a GET request. In case if you want to make a POST request then the optoinal object parameter can be used.
+
 */
