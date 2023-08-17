@@ -1,21 +1,16 @@
-/*
-async function fetchData() {
-  const response = await fetch("https://jsonplaceholder.typicode.com/users");
-  console.log(response.ok); // true
-  console.log(response.status); //200
+// This program fetches data from a specified URL and logs it to the console.
 
-  if (response.ok) {
-    data = await response.json();
-    //   blob will read the binary data
-    console.log(data);
-  }
-}
-fetchData();
-*/
-
-/* This is the fetch syntax and above code is using await */
-
+// The fetch function is used to make a network request to the specified URL.
+// It returns a Promise that resolves to the Response to that request.
 fetch("https://jsonplaceholder.typicode.com/users")
-  .then((response) => response.json()).then((data) => {
-    console.log(data);
+  // The .then() method is used to handle the Promise returned by fetch.
+  // It takes a callback function as an argument that will be executed when the Promise resolves.
+  .then((response) => response.json()) 
+  // Here, we chain another .then() to the previous one.
+  // This .then() is used to handle the Promise returned by the previous .then().
+  // It takes a callback function as an argument that will be executed when the Promise resolves.
+  .then((data) => {
+    // Inside this callback, we have access to the JSON data retrieved from the previous step.
+    // In this case, the 'data' parameter represents the parsed JSON data.
+    console.log(data); // We log the parsed JSON data to the console.
   });
