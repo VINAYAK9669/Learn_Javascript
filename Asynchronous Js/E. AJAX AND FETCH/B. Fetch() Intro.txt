@@ -1,0 +1,122 @@
+/*
+Question 1: What is the purpose of the "fetch" function in JavaScript?
+
+A) To manipulate the Document Object Model (DOM) of a web page.
+B) To create new elements and attributes in HTML documents.                                                             
+C) To make network requests and retrieve resources from a URL.  *
+D) To perform mathematical calculations.
+
+Question 2: Which of the following best describes the syntax of the "fetch" function?
+
+A) fetch(url)
+B) fetch(url, options) *
+C) fetch(options, url)
+D) fetch()
+
+Question 3: Which of the following methods is used to handle the response data from a fetch request?
+
+A) .respondData()
+B) .handleResponse()
+C) .then(response => { })
+D) .fetch(response => { })
+
+Question 4: What does the "response.ok" property indicate in the fetch API?
+
+A) Whether the response is formatted as JSON.
+B) Whether the response contains valid headers.
+C) Whether the response status is within the range 200-299.
+D) Whether the fetch request was successful.
+
+Question 5: What does the ".json()" method do in the fetch API?
+
+A) Converts the response body to a string.
+B) Parses the response body as JSON and returns a Promise.
+C) Returns the response headers as an object.
+D) Appends new data to the response body.
+
+Question 6: Which Promise method is used to handle errors that might occur during a fetch request?
+
+A) .catch()
+B) .error()
+C) .handleError()
+D) .onError()
+
+Question 7: Which HTTP method is typically used for retrieving data using the fetch function?
+
+A) PUT
+B) POST
+C) GET
+D) DELETE
+
+Question 8: What does the "options" parameter in the fetch function allow you to specify?
+
+A) The request body content.
+B) The response data format.
+C) The type of HTTP request (GET, POST, etc.).
+D) The URL of the resource to modify.
+
+Question 9: Which of the following is an advantage of using the fetch function over the older XMLHttpRequest (XHR) method?
+
+A) Better support for older browsers.
+B) More complex syntax.
+C) Improved asynchronous handling with Promises.
+D) Ability to modify the DOM directly.
+
+Question 10: What is the purpose of the "catch" method in the fetch API?
+
+A) To specify request options.
+B) To convert response data to JSON format.
+C) To handle successful responses.
+D) To handle errors that occur during the fetch request.
+
+Answers:
+
+1.C
+2.B
+3.C
+4.C
+5.B
+6.A
+7.C
+8.C
+9.C
+10.D
+
+*/
+
+// ==========================================   INTRODUCTION  ==============================
+
+/*
+        Question 1) What is fetch in JS?
+
+                    - Fetch is the built in function that allows us to make network requests
+                      to retrieve resources, typically data, from a specified URL.
+                    - Commonly used to perform HTTP requests and interact with APIs.
+                    
+                    Basic Syntax:
+
+                            fectch(url, options)
+                            {
+                            .then(response=>
+                                {
+                                
+                                })
+                            }.catch(error=>
+                                {
+                                
+                                })
+                
+                Here, 
+                      url: This is the URL of the sources you want to fetch. it might be relative/absoulte URL
+                      options: 
+                                - This is a optional parameter that allows you to specify various options for the 
+                                  request , such as headers, requests method (GET, POST), request body and more.
+                                - It's an object that you can customize according to your needs.
+                                - 
+            
+            - fetch function will returns a Promise that resolves to the Response object representing 
+              the response to the request.
+            - .then() method is used to handle the response when it's successful and the .catch()
+              method is used to handle any errors that occur during the requests.
+
+*/
