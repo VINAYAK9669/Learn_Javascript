@@ -1,0 +1,33 @@
+<!-- 
+
+    Question 1) What is named import and export?
+
+                - This allow us to selectively import or export specific variables, functions, or
+                  constants from a module.
+                
+            
+
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Some Content</h1>
+  </body>
+  <script type="module">
+    import { total, cube } from "./exportFile.js";
+    total(20, 30);
+    cube(20);
+    // Import all functions at once which stores as object
+    import * as myRelationship from "./Name.js";
+    // call the sister propert from the myRelationship object
+    myRelationship.sisters();
+    // Sheela
+    // Ashwini
+  </script>
+</html>
