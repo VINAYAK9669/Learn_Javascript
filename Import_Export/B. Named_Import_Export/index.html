@@ -5,8 +5,8 @@
                 - This allow us to selectively import or export specific variables, functions, or
                   constants from a module.
                 
-            
-
+     Question 2) Do the modules hoist?
+               - Yes we can.
  -->
 
 <!DOCTYPE html>
@@ -20,9 +20,10 @@
     <h1>Some Content</h1>
   </body>
   <script type="module">
-    import { total, cube } from "./exportFile.js";
     total(20, 30);
     cube(20);
+    // Hoisting of modules is possible in JS
+    import { total, cube } from "./exportFile.js";
     // Import all functions at once which stores as object
     import * as myRelationship from "./Name.js";
     // call the sister propert from the myRelationship object
