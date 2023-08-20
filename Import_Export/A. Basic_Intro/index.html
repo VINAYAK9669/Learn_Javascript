@@ -1,0 +1,31 @@
+<!-- 
+
+    Question 1) What is mpdule in JS?
+            
+         >> module is way to organize code into seprate files.
+         >> Modern JS uses 'import' and 'export'  statements to work with modules.
+         >> These keywords are introduced as A ES6 features.
+
+    Question 2) Can we import any module inside the script tag?
+          >>> Not directly. If we want to import the module inside the 
+              script tag then we need to use the attribute called "type=module" in the script tag
+
+    Question 3) 
+
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Some Content</h1>
+  </body>
+  <script type="module">
+    import { calc } from "./exportFile.js";
+    calc();
+  </script>
+</html>
