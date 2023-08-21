@@ -1,0 +1,31 @@
+# INTRODUCTION TO DEBOUNCE AND THROTTLE
+    - Debounce and throttling are the two techniques used to control the frequency of certain 
+      events.
+    - These techniques are used where events occur rapidly or frequently.
+
+1)  THROTTLING
+    -  This is the technique where the function calls occur after fixed interval regardless of how 
+       frequently the triggering event occurs.
+    - It can be used to prevent excessive resources usage or to enforce a certain rate limit for API calls.
+
+  Here's how throttling Works:
+    - When the event is triggered it will call the function immediately.
+    - However, subsequent event triggers within a specific time interval are ignored.
+    - After the time interval elapses,  the function becomes eligible for execution again.
+
+  BEST EXAMPLE: "SCROLLING A WEBPAGE"- You can set interval for scrolling event for better experience.
+
+
+2)   DEBOUNCE 
+    - In this technique  we set the interval at which the repeated function calls can execute on event trigger.
+    - If another event triggers within the specified interval then the timer is reset.
+    - The function is executed only when the timer completes without being reset.
+
+Here's how debounce Works:
+    When the event is triggered, a timer is started.
+    If the event is triggered again before the timer elapses, the timer is reset.
+    If no new event is triggered within the timer's duration, the function is executed.
+    This prevents the function from being executed until there's a pause in the events.
+
+Best Example: When implementing search suggestions, you might want to wait for the user to pause typing before sennding
+              a request to fetch suggestions.
