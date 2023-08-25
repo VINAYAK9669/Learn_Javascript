@@ -20,3 +20,11 @@ const pattern = /apple/i;
 const string = "I like apples. Apple are delicous";
 const match = string.match(pattern);
 console.log(match);
+
+// -------------------------------------
+// How we can perform a basic pattern match using Regex in js?
+const pattern1 = /apple/i;
+const string1 = "I like apples. Apple are delicous";
+const match1 = pattern1.test(string);
+console.log(match1); // true
+
