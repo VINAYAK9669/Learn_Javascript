@@ -31,24 +31,17 @@ const pattern5 = /\S+/g;
 const patternMatch5 = text.match(pattern5);
 console.log("Pattern Match S: " + patternMatch5);
 
-//--------------------  OUTPUT ---------------------
+// * 7) \m -Multiline search modifier
 
+const textInfo = `Line 1: Hello World
+Line 2: This is a test
+Line 3: Multiline example
+`;
+
+const patterntest = /^Line \d+:/gm;
 /*
-
-Pattern Match d: 5,3,6,18
-
-Pattern Match D:
- I am learning
- HTML,  , CSS,, JS ES, & React_, ?!%&
- 
-Pattern Match w: I,am,learning,HTML5,CSS3,JS,ES6,React_18     
-
-Pattern Match W:
- , , ,
- ,      , ,, , , & , ?!%&
- 
-Pattern Match s:
- , , ,
- ,      , , , , , ,
-
+Notice that each line that starts with "Line X:" is matched individually due to the m flag.
 */
+
+const printMatches = textInfo.match(patterntest);
+console.log("How multiline modifier works:" + printMatches);
